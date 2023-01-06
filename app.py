@@ -28,9 +28,14 @@ operations = {
 }
 
 num1 = int(input("What is the first number?: "))
-num2 = int(input("What is the second number?: "))
 
 for operator in operations:
   print(operator)
 
 symbol = input("Pick an operator from the line above: ")
+
+num2 = int(input("What is the second number?: "))
+
+answer = operations[symbol](num1, num2)
+
+print(f"{num1} {symbol} {num2} = {answer}")
